@@ -1,0 +1,29 @@
+body {
+    font-size: 1.25rem;
+}
+
+hr {
+    background-color: currentColor;
+    opacity: 1;
+}
+
+p {
+    margin: 2rem 0;
+}
+
+p.a {
+    text-decoration: underline;
+}
+
+blockquote {
+    font-style: italic;
+    color: #6c757d;
+}
+
+img, svg {
+    vertical-align: middle;
+}
+
+.icon {
+    color: black;
+}
