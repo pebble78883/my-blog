@@ -11,20 +11,22 @@
             <Pattern>${CONSOLE_LOG_PATTERN}</Pattern>
         </encoder>
     </appender>
+
     <appender name="file" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <file>logs/debug.log</file>
         <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
-            <fileNamePattern>log/%d{yyyy-MM}/debug.%d{yyyy-MM-dd}.%i.log.gz</fileNamePattern>
-            <maxFileSize>100MB</maxFileSize>
-            <maxHistory>15</maxHistory>
+            <fileNamePattern>logs/%d{yyyy-MM}/debug.%d{yyyy-MM-dd}.%i.log.gz</fileNamePattern>
+            <maxFileSize>10MB</maxFileSize>
+            <maxHistory>7</maxHistory>
         </rollingPolicy>
         <encoder>
             <Pattern>${CONSOLE_LOG_PATTERN}</Pattern>
         </encoder>
     </appender>
 
-    <logger name="org.hibernate.SQL" level="DEBUG" />
-    <logger name="org.hibernate.type" level="TRACE" />
+    <logger name="org.hibernate.SQL">
+        <level value="DEBUG"/>
+    </logger>
 
     <root level="INFO">
         <appender-ref ref="console"/>
