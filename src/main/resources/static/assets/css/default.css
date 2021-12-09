@@ -1,0 +1,6 @@
+@import "common/global.css";
+
+@import "components/header.css";
+@import "components/navbar.css";
+@import "components/footer.css";
+@import "components/posts.css";
