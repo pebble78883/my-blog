@@ -1,20 +1,18 @@
 <!DOCTYPE html>
-<html lagn="ko" xmlns:th="http://www.thymeleaf.org"
-      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<html lagn="ko"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:th="http://www.thymeleaf.org">
 
 <th:block th:replace="fragments/head :: head"></th:block>
 
-<body class="nav-md">
-    <div class="body">
-        <div id="main-container">
-            <th:block th:replace="fragments/navbar :: navbar"></th:block>
-            <th:block th:replace="fragments/header :: header"></th:block>
+<body>
+<div id="main-container">
+    <th:block th:replace="fragments/navbar :: navbar"></th:block>
+    <th:block th:replace="fragments/header :: header"></th:block>
 
-            <!-- Page -->
-            <th:block layout:fragment="content"></th:block>
-        </div>
-        <th:block th:replace="fragments/footer :: footer"></th:block>
-    </div>
+    <!-- Page -->
+    <th:block layout:fragment="content"></th:block>
 </div>
+<th:block th:replace="fragments/footer :: footer"></th:block>
 </body>
 </html>
