@@ -1,4 +1,4 @@
-package kr.pebbles.myblog.config;
+package kr.pebbles.myblog.global.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -18,10 +18,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http
-            .authorizeRequests()
+                .authorizeRequests()
+                .antMatchers("/posts/new").authenticated()
                 .anyRequest().permitAll()
-            .and()
-            .formLogin()
+                .and()
+                .formLogin()
                 .defaultSuccessUrl("/")
                 .permitAll();
 

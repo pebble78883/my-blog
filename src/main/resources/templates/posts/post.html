@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lagn="ko"
+      layout:decorate="~{layout/default-layout(title=${post.title}, subTitle=${post.subTitle})}"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:th="http://www.thymeleaf.org">
+
+<th:block layout:fragment="content">
+    <main class="mb-4" th:object="${post}">
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-md-10 col-lg-8 col-xl-7">
+                    <article th:text="*{content}"></article>
+                </div>
+            </div>
+        </div>
+    </main>
+</th:block>
+</html>

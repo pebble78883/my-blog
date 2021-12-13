@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lagn="ko"
+      layout:decorate="~{layout/default-layout}"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:th="http://www.thymeleaf.org">
+
+<th:block layout:fragment="content">
+    <main class="mb-4">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12">
+                    <form method="post" th:action th:object="${post}">
+                        <div class="py-2">
+                            <label for="title">Title</label>
+                            <input class="form-control" placeholder="제목을 입력하세요" th:field="*{title}" type="text">
+                        </div>
+                        <div class="py-2">
+                            <label for="subTitle">Sub Title</label>
+                            <input class="form-control" placeholder="부제목을 입력하세요" th:field="*{subTitle}" type="text">
+                        </div>
+                        <div class="py-2">
+                            <label for="content">Content</label>
+                            <textarea class="form-control" cols="10" placeholder="본문을 입력하세요"
+                                      rows="20" th:field="*{content}"/>
+                        </div>
+                        <button class="btn btn-success float-right" type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+</th:block>
+</html>

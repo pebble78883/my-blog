@@ -28,3 +28,8 @@ img, svg {
 .icon {
     color: black;
 }
+
+article {
+    font-size: 19px;
+    font-weight: 400;
+}

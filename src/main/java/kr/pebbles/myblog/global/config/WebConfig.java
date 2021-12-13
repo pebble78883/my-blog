@@ -1,4 +1,4 @@
-package kr.pebbles.myblog.config;
+package kr.pebbles.myblog.global.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.CacheControl;
