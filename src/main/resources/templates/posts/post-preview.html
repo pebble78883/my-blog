@@ -3,7 +3,7 @@
 
 <th:block th:fragment="post-preview(post)">
     <div class="post-preview" th:object="${post}">
-        <a href="post.html">
+        <a th:href="@{/posts/{postId}(postId=*{postId})}">
             <h2 class="post-title" th:text="*{title}">Title</h2>
             <h3 class="post-subtitle" th:text="*{subTitle}">Sub Title</h3>
         </a>
