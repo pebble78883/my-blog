@@ -18,7 +18,6 @@ public class PostCreate {
     @Size(max = 255)
     private String subTitle;
 
-    @Size(max = 1023)
     private String content;
 
     public PostCreate() {

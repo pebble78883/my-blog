@@ -27,7 +27,7 @@ public class Post {
     @Column
     private String subTitle;
 
-    @Column(length = 1023)
+    @Column(length = 2000)
     private String content;
 
     @Column(length = 100)
