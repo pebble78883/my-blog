@@ -1,6 +1,5 @@
 header.masthead {
     position: relative;
-    margin-bottom: 3rem;
     padding-top: calc(8rem + 57px);
     padding-bottom: 8rem;
     background: no-repeat center center;
@@ -80,14 +79,17 @@ header.masthead .post-heading .meta a {
         padding-top: 12.5rem;
         padding-bottom: 12.5rem;
     }
+
     header.masthead .page-heading h1, header.masthead .page-heading .h1,
     header.masthead .site-heading h1,
     header.masthead .site-heading .h1 {
         font-size: 5rem;
     }
+
     header.masthead .post-heading h1, header.masthead .post-heading .h1 {
         font-size: 3.5rem;
     }
+
     header.masthead .post-heading .subheading {
         font-size: 1.875rem;
     }

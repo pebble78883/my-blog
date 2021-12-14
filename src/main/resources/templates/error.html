@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lagn="ko" xmlns:th="http://www.thymeleaf.org">
+
+<th:block th:replace="fragments/head :: head(${title})"></th:block>
+
+<body>
+<div id="main-container">
+    <th:block th:replace="fragments/navbar :: navbar"></th:block>
+
+    <div class="error-content">
+        <div class="row justify-content-center">
+            <div class="message-box text-center col-10 py-2">
+                <h2>There's been a glitch..</h2>
+                <p>
+                    We're not quite sure what went wrong.<br>
+                    If you need a hand then <a href="/contact">contact me.</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<th:block th:replace="fragments/footer :: footer"></th:block>
+</div>
+</body>
+
+<style>
+    .error-content {
+        background-image: url('/assets/images/banner.jpeg');
+        background-size: cover;
+        height: 50vw;
+        padding-top: 15vw;
+    }
+
+    .message-box {
+        max-width: 400px;
+        background-color: rgba(255, 255, 255, 0.8);
+        border-radius: 1rem;
+    }
+</style>
+
+</html>

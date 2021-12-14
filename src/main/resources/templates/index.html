@@ -6,7 +6,10 @@
 
 <th:block layout:fragment="content">
     <th:block th:if="${#lists.size(posts) == 0}">
-        등록된 게시글이 없습니다.
+        <div class="text-center">
+            등록된 게시글이 없습니다. <br>
+            <a href="posts/new">첫 번째 글 작성하기</a>
+        </div>
     </th:block>
     <th:block th:each="post : ${posts}">
         <th:block th:replace="posts/post-preview :: post-preview(${post})"></th:block>
